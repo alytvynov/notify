@@ -10,3 +10,4 @@ Minor imperfections due to notifications bing sent via AppleScript:
 
 Known issues:
 - exit code from notify doesn't match exit code from command
+- common shell syntax is not supported; e.g. notify GOOS=linux ./make.bash won't work, GOOS=linux notify ./make.bash is the correct way to run it
