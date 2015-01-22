@@ -28,7 +28,9 @@ func main() {
 		status = err.Error()
 	}
 
-	notifycmd := fmt.Sprintf(`display notification "%s completed; %s; duration = %s" with title "Command complete"`,
+	notifycmd := fmt.Sprintf(`display notification "%s completed
+%s
+duration = %s" with title "Command complete"`,
 		strings.Replace(strings.Join(os.Args[1:], " "), `"`, `\"`, -1),
 		strings.Replace(status, `"`, `\"`, -1),
 		strings.Replace(time.Since(start).String(), `"`, `\"`, -1))
